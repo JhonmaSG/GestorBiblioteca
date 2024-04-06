@@ -34,27 +34,29 @@
 
                     </li>
                     <div class="collapse navbar-collapse" id="menuNav">
-                        <li class="nav-item active" id="labelHome">
-                            <a class="nav-link"
-                               href="controlador?menu=Home" target="myFrame">Home</a>
-                        </li>
-                        <div class="collapse navbar-collapse" id="menuItemsCenter">
-                            <li class="nav-item">
-                                <a class="btn btn-outline-light" 
-                                   href="controlador?menu=Empleado&accion=Listar" target="myFrame">Administracion</a>
+                        <ul class="navbar-nav">
+                            <li class="nav-item active" id="labelHome">
+                                <a class="nav-link"
+                                   href="controlador?menu=Home" target="myFrame">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="btn btn-outline-light" 
-                                   href="controlador?menu=Producto&accion=Listar" target="myFrame">Inventario</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn btn-outline-light" 
-                                   href="controlador?menu=Cliente&accion=Listar" target="myFrame">Prestamo</a>
-                            </li>
-                        </div>
+                            <div class="collapse navbar-collapse" id="menuItemsCenter">
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light" 
+                                       href="controlador?menu=Empleado&accion=Listar" target="myFrame">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light" 
+                                       href="controlador?menu=Producto&accion=Listar" target="myFrame">Inventario</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light" 
+                                       href="controlador?menu=Cliente&accion=Listar" target="myFrame">Prestamo</a>
+                                </li>
+                        </ul>
                     </div>
+                </ul>
             </div>
-        </ul>
+        </div>
     </div>
 
     <div class="dropdown">

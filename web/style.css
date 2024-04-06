@@ -11,8 +11,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     color:aqua;
     font-size: 22px;
 }
+
 #menuNav{
-    padding-left: 250px;
+    padding-left: 300px;
 }
 .nav-link{
     font-size: 18px;
