@@ -20,7 +20,10 @@
                         <div class="form-group text-center">
                             <h3>Contraseña Cambianda</h3>
                             
-                            <label style="display: block"><br><b>PROXIMAMENTE...</b></label>
+                            <label style="display: block">
+                                <br><b>PROXIMAMENTE EN CONSTRUCCION...</b>
+                                
+                            </label>
                         </div>
                         
                         <input type="submit" name="accion" value="Atras" class="btn btn-warning btn-lg btn-block">
