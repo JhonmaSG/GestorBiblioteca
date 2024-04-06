@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <title>Alejandria Login</title>
     </head>
-    <body>
+    <body style="background: #989898;">
         <div class="container mt-4 col-4">
             <div class="card col-sm-10">
                 <div class="card-body">
@@ -31,10 +31,11 @@
                         <div class="form-group">
                             <label>Contraseña:</label>
                             <input type="password" name="txtpass" class="form-control">
+                            <input type="submit" name="accion" value="Olvide mi contraseña" class="btn btn-link">
                         </div>
                         
                         <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
-                        <input type="reset" name="accion" value="Limpiar" class="btn btn-primary">
+                        <input type="reset" name="accion" value="Limpiar" class="btn btn-warning">
                     </form>
                 </div>
             </div>

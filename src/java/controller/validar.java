@@ -52,7 +52,13 @@ public class validar extends HttpServlet {
                 request.getRequestDispatcher("index.jsp")
                         .forward(request, response);
             }
-        } else {
+        } else if(accion.equals("Olvide mi contraseña")){
+            request.getRequestDispatcher("RecuperarContra.jsp").forward(request, response);
+        } else if(accion.equals("Atras")){
+            request.getRequestDispatcher("index.jsp").forward(request, response);
+        }else if(accion.equals("EnviarRecuperacion")){
+            request.getRequestDispatcher("ContraCambiada.jsp").forward(request, response);
+        }else {
             HttpSession sesion = request.getSession();
             sesion.removeAttribute("usuario");
             sesion.invalidate();

@@ -16,27 +16,36 @@
         <div class="container mt-4 col-4">
             <div class="card col-sm-10">
                 <div class="card-body">
+                    
                     <form class="form-sign" action="validar" method="POST">
                         <div class="form-group text-center">
-                            <h3>Login</h3>
+                            <h3>Recuperar contraseña</h3>
                             <img src="img/logoBiblioteca.png" alt="70" width="170"/>
                             
-                            <label style="display: block"><br><b>Bienvenido a Alexandria</b></label>
                             <label style="display: block">Gestos de Biblioteca</label>
                         </div>
                         <div class="form-group">
-                            <label>Usuario:</label>
+                            <label>Digite usuario</label>
                             <input type="text" name="txtuser" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Contraseña:</label>
+                            <label>Digite Contraseña:</label>
                             <input type="password" name="txtpass" class="form-control">
-                            <input type="submit" name="accion" value="Olvide mi contraseña" class="btn btn-link">
+                        </div>
+                        <div class="form-group">
+                            <label>Digite Correo:</label>
+                            <input type="email" name="txtuser" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Digite Dni:</label>
+                            <input type="number" name="txtuser" class="form-control">
                         </div>
                         
-                        <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
+                        <input type="submit" name="accion" value="EnviarRecuperacion" class="btn btn-primary">
                         <input type="reset" name="accion" value="Limpiar" class="btn btn-warning">
+                        <input type="submit" name="accion" value="Atras" class="btn btn-primary">
                     </form>
+                    
                 </div>
             </div>
         </div>

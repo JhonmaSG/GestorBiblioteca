@@ -18,24 +18,12 @@
                 <div class="card-body">
                     <form class="form-sign" action="validar" method="POST">
                         <div class="form-group text-center">
-                            <h3>Login</h3>
-                            <img src="img/logoBiblioteca.png" alt="70" width="170"/>
+                            <h3>Contraseña Cambianda</h3>
                             
-                            <label style="display: block"><br><b>Bienvenido a Alexandria</b></label>
-                            <label style="display: block">Gestos de Biblioteca</label>
-                        </div>
-                        <div class="form-group">
-                            <label>Usuario:</label>
-                            <input type="text" name="txtuser" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Contraseña:</label>
-                            <input type="password" name="txtpass" class="form-control">
-                            <input type="submit" name="accion" value="Olvide mi contraseña" class="btn btn-link">
+                            <label style="display: block"><br><b>PROXIMAMENTE...</b></label>
                         </div>
                         
-                        <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
-                        <input type="reset" name="accion" value="Limpiar" class="btn btn-warning">
+                        <input type="submit" name="accion" value="Atras" class="btn btn-warning btn-lg btn-block">
                     </form>
                 </div>
             </div>
