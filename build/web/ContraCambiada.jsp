@@ -22,7 +22,6 @@
                             
                             <label style="display: block">
                                 <br><b>PROXIMAMENTE EN CONSTRUCCION...</b>
-                                
                             </label>
                         </div>
                         
