@@ -1,6 +1,6 @@
-#Web Selling System in Java
+#Web Gestor Biblioteca Alexandria System in Java
 
-Web selling System with products.
+Gestor Biblioteca Alexandria.
 
 This repository include:
 - HTML
