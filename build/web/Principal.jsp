@@ -1,15 +1,11 @@
-<%-- 
-    Document   : index
-    Created on : 25/3/2024, 4:16:19 p. m.
-    Author     : Jhon
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="model.Empleado" %>
+<%@page import="model.Usuario" %>
 
 <% HttpSession sesion = request.getSession();
- Empleado emp = (Empleado) sesion.getAttribute("usuario"); 
-   if( emp != null ){
+ //Empleado emp = (Empleado) sesion.getAttribute("usuario");
+ Usuario user = (Usuario) sesion.getAttribute("usuario"); 
+   if( user != null){
 %>
 <!DOCTYPE html>
 <html>
@@ -42,16 +38,10 @@
                             <div class="collapse navbar-collapse" id="menuItemsCenter">
                                 <li class="nav-item">
                                     <a class="btn btn-outline-light" 
-                                       href="controlador?menu=Empleado&accion=Listar" target="myFrame">Administracion</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-outline-light" 
-                                       href="controlador?menu=Producto&accion=Listar" target="myFrame">Inventario</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-outline-light" 
                                        href="controlador?menu=Cliente&accion=Listar" target="myFrame">Prestamo</a>
                                 </li>
+                                
+                                
                         </ul>
                     </div>
                 </ul>
@@ -60,16 +50,16 @@
     </div>
 
     <div class="dropdown">
-        <button style="border: none; font-size: 20px;" class="btn btn-outline-light dropdown-toggle" type="button" 
+        <button style="border: none; font-size: 20px; width: 200px;" class="btn btn-outline-light dropdown-toggle" type="button" 
                 data-toggle="dropdown" aria-expanded="false">
-            ${usuario.getNom()}
+            ${usuario.getNombre()}
         </button>
         <div class="dropdown-menu text-center">
             <a class="dropdown-item" href="#">
                 <img src="img/user.png" alt="60" width="60"/>
             </a>
-            <a class="dropdown-item" href="#">${usuario.getUser()}</a>
-            <a class="dropdown-item" href="#">${usuario.getUser()}@gmail.com</a>
+            <a class="dropdown-item" href="#">${usuario.getNombre()}</a>
+            <a class="dropdown-item" href="#">${usuario.getNombre_user()}@gmail.com</a>
             <a class="dropdown-item" href="#" id="cambiar-contraseña">Cambiar contraseña</a>
             <a class="dropdown-item" href="#" id="mostrar-horario">Horarios</a>
             <div class="dropdown-divider"></div>
@@ -92,7 +82,7 @@
 
 </nav>
 
-<div class="m-4" style="height: 689px; margin-bottom: 0px;">
+<div class="m-4" style="height: 736px; margin-bottom: 0px;">
     <iframe name="myFrame" style="height: 100%; width: 100%; max-height: 1080px; border: none;"></iframe>
 </div>
 

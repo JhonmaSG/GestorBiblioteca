@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/web/index.jsp</file>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/src/java/model/Empleado.java</file>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/src/java/model/EmpleadoDAO.java</file>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/web/Principal.jsp</file>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/src/java/config/conexion.java</file>
-            <file>file:/C:/Users/Jhon/Documents/NetBeansProjects/GestosBiblioteca/web/Home.jsp</file>
+            <file>file:/C:/Users/jhonm/Downloads/GestorBiblioteca2/GestorBiblioteca/web/index.jsp</file>
+            <file>file:/C:/Users/jhonm/Downloads/GestorBiblioteca2/GestorBiblioteca/web/Inventario.jsp</file>
+            <file>file:/C:/Users/jhonm/Downloads/GestorBiblioteca2/GestorBiblioteca/src/java/controller/controlador.java</file>
+            <file>file:/C:/Users/jhonm/Downloads/GestorBiblioteca2/GestorBiblioteca/web/Principal_Admin.jsp</file>
         </group>
     </open-files>
 </project-private>

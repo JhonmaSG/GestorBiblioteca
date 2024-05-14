@@ -26,7 +26,7 @@ public class EmpleadoDAO {
 
     public Empleado validar(String user, String clave) {
         Empleado em = new Empleado();
-        String sql = "select * from empleado where User=? and Password=?";
+        String sql = "select * from empleado where nombre_usuario=? and contraseña=?";
         try {
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
@@ -37,10 +37,10 @@ public class EmpleadoDAO {
             //System.out.println("Claveeee: "+clave);
             rs = ps.executeQuery();
             while (rs.next()) {
-                em.setId(rs.getInt("IdEmpleado"));
-                em.setUser(rs.getString("User"));
-                em.setDni(rs.getString("Dni"));
-                em.setNom(rs.getString("Nombres"));
+                em.setId(rs.getInt("id_empleado"));
+                em.setUser(rs.getString("nombre_usuario"));
+                em.setDni(rs.getString("cedula"));
+                em.setNom(rs.getString("nombre"));
             }
         } catch (SQLException e) {
             System.out.println("Error ValidarEmp: "+ e.getMessage());

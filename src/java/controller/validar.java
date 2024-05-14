@@ -13,6 +13,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import model.Empleado;
 import model.EmpleadoDAO;
+import model.Usuario;
+import model.UsuarioDAO;
 
 //Mirar JDK 16.0
 //Jhon Serrano
@@ -24,6 +26,9 @@ public class validar extends HttpServlet {
 
     EmpleadoDAO edao = new EmpleadoDAO();
     Empleado em = new Empleado();
+    
+    UsuarioDAO udao = new UsuarioDAO();
+    Usuario us = new Usuario();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -35,20 +40,30 @@ public class validar extends HttpServlet {
             String user = request.getParameter("txtuser");
             String pass = request.getParameter("txtpass");
 
-            String passEncriptada = encriptar(pass);
+            //String passEncriptada = encriptar(pass);
             //System.out.println("contra encriptada Validar: " + passEncriptada);
             //System.out.println("tamaño String: " + passEncriptada.length());
-
-            em = edao.validar(user, passEncriptada);
-
-            if (em.getUser() != null) {//Si trajo algo de la base de datos
+            
+            us = udao.validar(user, pass);
+            System.out.println(us.getNombre());
+            em = edao.validar(user, pass);
+            System.out.println(em.getNom());
+            if ( em.getNom()!= null) {//Si trajo algo de la base de datos
                 System.out.println("Ingreso Sesion OK");
                 HttpSession sesion = request.getSession();
                 
-                sesion.setAttribute("usuario", em);//clase: "usuario"
+                sesion.setAttribute("empleado", em);//clase: "usuario"
+                request.getRequestDispatcher("controlador?menu=Principal_Admin")
+                        .forward(request, response);
+            }
+            if ( us.getNombre_user()!= null) {//Si trajo algo de la base de datos
+                System.out.println("Ingreso Sesion OK");
+                HttpSession sesion = request.getSession();
+                
+                sesion.setAttribute("usuario", us);//clase: "usuario"
                 request.getRequestDispatcher("controlador?menu=Principal")
                         .forward(request, response);
-            } else {
+            }else {
                 request.getRequestDispatcher("index.jsp")
                         .forward(request, response);
             }
@@ -58,6 +73,10 @@ public class validar extends HttpServlet {
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }else if(accion.equals("EnviarRecuperacion")){
             request.getRequestDispatcher("ContraCambiada.jsp").forward(request, response);
+        }else if(accion.equals("Crear Cuenta")){
+            request.getRequestDispatcher("CrearCuenta.jsp").forward(request, response);
+        }else if(accion.equals("Inicio")){
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         }else {
             HttpSession sesion = request.getSession();
             sesion.removeAttribute("usuario");
