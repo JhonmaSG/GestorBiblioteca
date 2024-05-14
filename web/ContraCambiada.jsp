@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : 25/3/2024, 4:16:19 p. m.
+    Created on : 25/3/2024, 4:16:19 p.m.
     Author     : Jhon
 --%>
 
@@ -9,7 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+              integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
         <title>Alejandria Login</title>
     </head>
     <body style="background: #989898;">
@@ -18,14 +19,14 @@
                 <div class="card-body">
                     <form class="form-sign" action="validar" method="POST">
                         <div class="form-group text-center">
-                            <h3>Contraseña Cambianda</h3>
+                            <h3>Contraseña Cambiada</h3>
                             
                             <label style="display: block">
-                                <br><b>PROXIMAMENTE EN CONSTRUCCION...</b>
+                                <br><b>CONTRASEÑA CAMBIADA CON EXITO</b>
                             </label>
                         </div>
                         
-                        <input type="submit" name="accion" value="Atras" class="btn btn-warning btn-lg btn-block">
+                        <input type="submit" name="accion" value="Inicio" class="btn btn-warning btn-lg btn-block">
                     </form>
                 </div>
             </div>

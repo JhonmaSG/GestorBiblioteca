@@ -35,6 +35,7 @@
                         </div>
                         
                         <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
+                        <input type="submit" name="accion" value="Crear Cuenta" class="btn btn-info">
                         <input type="reset" name="accion" value="Limpiar" class="btn btn-warning">
                     </form>
                 </div>

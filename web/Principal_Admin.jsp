@@ -4,8 +4,8 @@
 
 <% HttpSession sesion = request.getSession();
  //Empleado emp = (Empleado) sesion.getAttribute("usuario");
- Usuario user = (Usuario) sesion.getAttribute("usuario"); 
-   if( user != null){
+ Empleado emp = (Empleado) sesion.getAttribute("empleado"); 
+   if( emp != null){
 %>
 <!DOCTYPE html>
 <html>
@@ -40,7 +40,14 @@
                                     <a class="btn btn-outline-light" 
                                        href="controlador?menu=Cliente&accion=Listar" target="myFrame">Prestamo</a>
                                 </li>
-                                
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light" 
+                                       href="controlador?menu=Empleado&accion=Listar" target="myFrame">Administracion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-light" 
+                                       href="controlador?menu=Inventario&accion=Listar" target="myFrame">Inventario</a>
+                                </li>
                                 
                         </ul>
                     </div>
@@ -52,14 +59,14 @@
     <div class="dropdown">
         <button style="border: none; font-size: 20px; width: 200px;" class="btn btn-outline-light dropdown-toggle" type="button" 
                 data-toggle="dropdown" aria-expanded="false">
-            ${usuario.getNombre()}
+            ${empleado.getNom()}
         </button>
         <div class="dropdown-menu text-center">
             <a class="dropdown-item" href="#">
                 <img src="img/user.png" alt="60" width="60"/>
             </a>
-            <a class="dropdown-item" href="#">${usuario.getNombre()}</a>
-            <a class="dropdown-item" href="#">${usuario.getNombre_user()}@gmail.com</a>
+            <a class="dropdown-item" href="#">${empleado.getNom()}</a>
+            <a class="dropdown-item" href="#">${empleado.getUser()}@gmail.com</a>
             <a class="dropdown-item" href="#" id="cambiar-contraseña">Cambiar contraseña</a>
             <a class="dropdown-item" href="#" id="mostrar-horario">Horarios</a>
             <div class="dropdown-divider"></div>

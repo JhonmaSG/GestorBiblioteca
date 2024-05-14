@@ -6,11 +6,8 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="model.Empleado" %>
-<% HttpSession sesion = request.getSession();
- Empleado emp = (Empleado) sesion.getAttribute("usuario"); 
-   if( emp != null ){
-%>
+<%@page import="model.Usuario" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,25 +23,37 @@
         <div class="d-flex">
             <div class="card">
                 <div class="card-body">
-                    <form action="controlador?menu=Cliente" method="POST">
-                        <div class="form-group">
-                            <label>Dni</label>
-                            <input type="text" value="${cliente.getDni()}" name="txtDni" class="form-control">
-                        </div>
+                    <form action="controlador?menu=Empleado" method="POST">
                         <div class="form-group">
                             <label>Nombres</label>
-                            <input type="text" value="${cliente.getNom()}" name="txtNom" class="form-control">
+                            <input type="text" value="${usuario.getNombre()}" name="txtNom" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Dirección</label>
-                            <input type="text" value="${cliente.getDir()}" name="txtDir" class="form-control">
+                            <label>Apellidos</label>
+                            <input type="text" value="${usuario.getApellido()}" name="txtApe" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Cedula</label>
+                            <input type="text" value="${usuario.getCedula()}" name="txtCedula" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input type="text" value="${usuario.getCorreo()}" name="txtCorreo" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>User</label>
+                            <input type="text" value="${usuario.getNombre_user()}" name="txtUser" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Estado</label>
-                            <input type="text" value="${cliente.getEs()}" name="txtEstado" class="form-control">
+                            <input type="text" value="${usuario.getEstado()}" name="txtEstado" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Rol</label>
+                            <input type="text" value="${usuario.getRol()}" name="txtRol" class="form-control">
                         </div>
 
-                        <input type="submit" name="accion" value="Agregar" class="btn btn-info">
+
                         <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
                     </form>
                 </div>
@@ -55,24 +64,37 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>DNI</th>
                             <th>NOMBRES</th>
-                            <th>DIRECCIÓN</th>
+                            <th>APELLIDOS</th>
+                            <th>PASSWORD</th>
+                            <th>RESPUESTA_SEG</th>
+                            <th>CEDULA</th>
+                            <th>CORREO</th>
+                            <th>USER</th>
                             <th>ESTADO</th>
-                            <th>ACCIONES</th>
+                            <th>ROL</th>
+
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach var="cl" items="${clientes}">
+                        <c:forEach var="usu" items="${usuarios}">
                             <tr>
-                                <td>${cl.getId()}</td>
-                                <td>${cl.getDni()}</td>
-                                <td>${cl.getNom()}</td>
-                                <td>${cl.getDir()}</td>
-                                <td>${cl.getEs()}</td>
+                                <td>${usu.getId_usuario()}</td>
+                                <td>${usu.getNombre()}</td>
+                                <td>${usu.getApellido()}</td>
+                                <td>${usu.getContraseña()}</td>
+                                <td>${usu.getRespuesta()}</td>
+                                <td>${usu.getCedula()}</td>
+                                <td>${usu.getCorreo()}</td>
+                                <td>${usu.getNombre_user()}</td>
+                                <td>${usu.getEstado()}</td>
+                                <td>${usu.getRol()}</td>
+
+
+
                                 <td>
-                                    <a class="btn btn-warning" href="controlador?menu=Cliente&accion=Editar&id=${cl.getId()}">Editar</a>
-                                    <a class="btn btn-danger" href="controlador?menu=Cliente&accion=Delete&id=${cl.getId()}">Delete</a>
+                                    <a class="btn btn-warning" href="controlador?menu=Empleado&accion=Editar&id=${usu.getId_usuario()}">Editar</a>
+                                    <a class="btn btn-danger" href="controlador?menu=Empleado&accion=Delete&id=${usu.getId_usuario()}">Delete</a>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -88,7 +110,4 @@
     </body>
 </html>
 
-<% } else{
-    request.getRequestDispatcher("index.jsp").forward(request,response);
-}
-%>
+

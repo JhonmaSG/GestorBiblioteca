@@ -8,7 +8,6 @@
 <%@page import="model.Empleado" %>
 <% HttpSession sesion = request.getSession();
  Empleado emp = (Empleado) sesion.getAttribute("usuario"); 
-   if( emp != null ){
 %>
 <!DOCTYPE html>
 <html>
@@ -110,7 +109,5 @@
     </body>
 </html>
 
-<% } else{
-    request.getRequestDispatcher("index.jsp").forward(request,response);
-}
+<%
 %>
