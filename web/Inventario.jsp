@@ -13,40 +13,74 @@
         <title>INVENTARIO</title>
     </head>
     <body>
-        
-        <h1 class="display-4">INVENTARIO</h1>
-        
+
+        <h1 class="display-4">INVENTARIO</h1><br>
+
         <div class="d-flex">
-            <div class="card">
+            <div class="card w-50">
                 <div class="card-body">
                     <form action="controlador?menu=Inventario" method="POST">
                         <div class="form-group">
+                            <label>Consultar Libro</label>
+                            <input type="text" value="" name="txtconsulta" class="form-control">
+                        </div>
+                        <input type="submit" name="accion" value="Listar" class="btn btn-warning">
+                        <input type="submit" name="accion" value="Buscar por ID" class="btn btn-info">
+                        <input type="submit" name="accion" value="Buscar por Titulo" class="btn btn-info">
+                    </form>
+                </div>
+            </div>
+            &nbsp; &nbsp; &nbsp;
+            <div class="card w-25">
+                <div class="card-body">
+                    <form action="controlador?menu=Inventario" method="POST">
+                        <div class="form-group text-center">
+                            <label>Generar informe de Libros</label><br><br>
+                            <input type="submit" name="accion" value="Generar Informe" class="btn btn-warning">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><br>
+
+        <div class="d-flex">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Datos del libro</h3><br>
+                    <form action="controlador?menu=Inventario" method="POST">
+                        <div class="form-group">
                             <label>Id</label>
-                            <input type="text" value="${libro.getId_libro()}" name="txtid" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getId_libro() : ''}" 
+                                   name="txtid" class="form-control" readonly>
                         </div>
                         <div class="form-group">
                             <label>Titulo</label>
-                            <input type="text" value="${libro.getTitulo()}" name="txttitulo" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getTitulo() : ''}" 
+                                   name="txttitulo" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Autor</label>
-                            <input type="text" value="${libro.getAutor()}" name="txtautor" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getAutor() : ''}" 
+                                   name="txtautor" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Genero</label>
-                            <input type="text" value="${libro.getGenero()}" name="txtgenero" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getGenero() : ''}" 
+                                   name="txtgenero" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Publicacion</label>
-                            <input type="text" value="${libro.getPublicacion()}" name="txtpublicacion" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getPublicacion() : ''}" 
+                                   name="txtpublicacion" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Cantidad</label>
-                            <input type="text" value="${libro.getCantidad_disponible()}" name="txtcantidad" class="form-control">
+                            <input type="text" value="${libro != null ? libro.getCantidad_disponible() : ''}" 
+                                   name="txtcantidad" class="form-control">
                         </div>
 
-                        <!--<input type="submit" name="accion" value="Agregar" class="btn btn-info">-->
-                        <input type="submit" name="accion" value="Actualizar" class="btn btn-success">
+                        <input type="submit" name="accion" value="Agregar" class="btn btn-success">
+                        <input type="submit" name="accion" value="Actualizar" class="btn btn-info">
                     </form>
                 </div>
             </div>
@@ -61,6 +95,7 @@
                             <th>GENERO</th>
                             <th>PUBLICACION</th>
                             <th>CANTIDAD</th>
+                            <th>ACCION</th>
                         </tr>
                     </thead>
                     <tbody>
