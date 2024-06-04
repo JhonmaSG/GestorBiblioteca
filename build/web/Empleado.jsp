@@ -20,9 +20,9 @@
         <title>EMPLEADOS</title>
     </head>
     <body>
-        
+
         <h1 class="display-4">Empleado</h1>
-        
+
         <div class="d-flex">
             <div class="card">
                 <div class="card-body">

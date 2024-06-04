@@ -8,6 +8,10 @@
         <servlet-name>validar</servlet-name>
         <servlet-class>controller.validar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Prestamo</servlet-name>
+        <servlet-class>Prestamo</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>controlador</servlet-name>
         <url-pattern>/controlador</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>validar</servlet-name>
         <url-pattern>/validar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Prestamo</servlet-name>
+        <url-pattern>/Prestamo</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
